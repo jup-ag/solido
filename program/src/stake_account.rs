@@ -66,7 +66,7 @@ impl StakeBalance {
 fn take_pubkey(data: &[u8]) -> (Pubkey, &[u8]) {
     let mut prefix = [0u8; 32];
     prefix.copy_from_slice(&data[..32]);
-    (Pubkey::new(&prefix), &data[32..])
+    (Pubkey::new_from_array(prefix), &data[32..])
 }
 
 /// Consume a little-endian `u32` from the data start, return it and the remainder.

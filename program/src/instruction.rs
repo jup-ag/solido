@@ -220,6 +220,7 @@ impl LidoInstruction {
         // is no IO, so for this particular writer, it should never fail.
         self.try_to_vec()
             .expect("Serializing an Instruction to Vec<u8> does not fail.")
+
     }
 }
 
@@ -989,6 +990,7 @@ pub fn set_max_commission_percentage(
     let data = LidoInstruction::SetMaxValidationCommission {
         max_commission_percentage,
     };
+
     Instruction {
         program_id: *program_id,
         accounts: accounts.to_vec(),

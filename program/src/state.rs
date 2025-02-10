@@ -13,7 +13,7 @@ use serde::Serialize;
 use borsh::{BorshDeserialize, BorshSchema, BorshSerialize};
 use solana_program::{
     account_info::AccountInfo,
-    borsh::{get_instance_packed_len, try_from_slice_unchecked},
+    borsh0_10::{get_instance_packed_len, try_from_slice_unchecked},
     clock::Clock,
     clock::Epoch,
     entrypoint::ProgramResult,
